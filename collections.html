@@ -8,6 +8,7 @@
   <title>Prem's Jewellery Stores - Collections</title>
 
   <style>
+    
     * {
       margin: 0;
       padding: 0;
@@ -107,6 +108,60 @@
       padding: 20px;
       margin-top: 50px;
     }
+    header {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.email {
+  font-size: 16px;
+  margin-bottom: 15px;
+  word-break: break-word;
+}
+
+.email a {
+  color: #c89b3c;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+    @media (max-width: 600px) {
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .collection-section h2 {
+    font-size: 28px;
+  }
+
+  #searchBox {
+    width: 90%;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+}
   </style>
 </head>
 
@@ -114,23 +169,23 @@
 
   <header>
 
-    <h1>Prem's Jewellery Stores</h1>
+  <h1>Prem's Jewellery Stores</h1>
 
-    <p style="position:absolute; top:75px; left:20px; font-size:16px;">
-      📧 Email ID:
-      <a href="mailto:a6761809@gmail.com" style="color:#c89b3c; text-decoration:none;">
-        a6761809@gmail.com
-      </a> ✨💌
-    </p>
+  <p class="email">
+    📧 Email ID:
+    <a href="mailto:a6761809@gmail.com">
+      a6761809@gmail.com
+    </a> ✨💌
+  </p>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  </header>
+</header>
 
   <section class="collection-section">
 
