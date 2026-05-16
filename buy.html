@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-box {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #111;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #c89b3c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <h2>💎 Jewellery Order Form</h2>
+
+        <form action="mailto:a6761809@gmail.com" method="post" enctype="text/plain">
+
+            <input type="text" name="Name" placeholder="Your Name" required>
+
+            <input type="tel" name="Phone" placeholder="Phone Number" required>
+
+            <input type="text" name="Address" placeholder="Address" required>
+
+            <input type="text" name="Product" placeholder="Product Name" required>
+
+            <input type="number" name="Quantity" placeholder="Quantity" required>
+
+            <textarea name="Message" placeholder="Additional Message"></textarea>
+
+            <button type="submit">Send Order ✨</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

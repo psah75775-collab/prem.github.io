@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Prem's Jewellery Stores - Collections</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: black;
+      color: #000000;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 40px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    .collection-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .collection-section h2 {
+      font-size: 38px;
+      color: #c89b3c;
+      margin-bottom: 20px;
+    }
+
+    .collection-section p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    #searchBox {
+      width: 60%;
+      padding: 15px;
+      border-radius: 30px;
+      border: 1px solid #ccc;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      font-size: 25px;
+    }
+
+    .card p {
+      padding: 0 15px 20px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <h1>Prem's Jewellery Stores</h1>
+
+    <p style="position:absolute; top:75px; left:20px; font-size:16px;">
+      📧 Email ID:
+      <a href="mailto:a6761809@gmail.com" style="color:#c89b3c; text-decoration:none;">
+        a6761809@gmail.com
+      </a> ✨💌
+    </p>
+
+    <nav>
+      <a href="indexcopy.html">Home</a>
+      <a href="collections.html">Collections</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+  <section class="collection-section">
+
+    <h2>Our Jewellery Collections</h2>
+
+    <p>
+      Search your favourite jewellery below.
+    </p>
+
+    <input type="text" id="searchBox" placeholder="Search Ring, Necklace, Bracelet..." onkeyup="searchItems()">
+
+    <div class="collection-grid">
+
+      <div class="card item" data-name="ring">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=800&auto=format&fit=crop">
+        <h3>💍 Ring</h3>
+        <p>Elegant gold and diamond rings.</p>
+      </div>
+
+      <div class="card item" data-name="bechya">
+        <img src="../image/teo.jpg" alt="Bichhiya Ring">
+        <h3>📿 Bechya</h3>
+        <p>Traditional bechya collections.</p>
+      </div>
+
+      <div class="card item" data-name="payal">
+        <img src="../image/payal.jpg" alt="Payal">
+        <h3>✨ Payal</h3>
+        <p>Beautiful silver payal designs.</p>
+      </div>
+
+      <div class="card item" data-name="necklace">
+        <img src="../image/necklace.jpg" alt="Necklace">
+        <h3>📿 Necklace</h3>
+        <p>Luxury necklace collections.</p>
+      </div>
+
+      <div class="card item" data-name="nose ring">
+        <img src="../image/nose.jpg" alt="Nose Ring">
+        <h3>💎 Nose Ring</h3>
+        <p>Modern nose ring jewellery.</p>
+      </div>
+
+      <div class="card item" data-name="earning ring">
+        <img src="../image/ear.jpg" alt="Earring Ring">
+        <h3>🌟 Earning Ring</h3>
+        <p>Stylish earning ring collections.</p>
+      </div>
+
+      <div class="card item" data-name="chain">
+        <img src="../image/chain.jpg" alt="Chain">
+        <h3>⛓ Chain</h3>
+        <p>Premium gold and silver chains.</p>
+      </div>
+
+      <div class="card item" data-name="bracelet">
+        <img src="../image/brac.jpg" alt="bracelet Ring">
+        <h3>🪙 Bracelet</h3>
+        <p>Fashionable bracelet collections.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Prem's Jewellery Stores | All Rights Reserved
+  </footer>
+
+  <script>
+
+    function searchItems() {
+
+      let input = document
+        .getElementById("searchBox")
+        .value
+        .toLowerCase();
+
+      let items = document.querySelectorAll(".item");
+
+      items.forEach(item => {
+
+        let name = item.getAttribute("data-name");
+
+        if (name.includes(input)) {
+          item.style.display = "block";
+        }
+        else {
+          item.style.display = "none";
+        }
+
+      });
+
+    }
+
+  </script>
+
+</body>
+
+</html>

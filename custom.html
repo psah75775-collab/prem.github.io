@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Jewellery Order</title>
+
+  <style>
+    body {
+      background: black;
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 700px;
+      margin: 50px auto;
+      background: #111;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #c89b3c;
+      margin-bottom: 30px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #222;
+      color: white;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 30px;
+      background: #c89b3c;
+      color: black;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: white;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      background: #222;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+    }
+
+    .back-btn:hover {
+      background: #c89b3c;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>💎 Custom Jewellery Order</h1>
+
+    <form action="mailto:a6761809@gmail.com" method="post" enctype="text/plain">
+
+      <input type="text" name="Name" placeholder="Enter Your Name" required>
+
+      <input type="email" name="Email" placeholder="Enter Your Email" required>
+
+      <input type="tel" name="Phone" placeholder="Enter Phone Number" required>
+
+      <select name="Jewellery Type" required>
+        <option value="">Select Jewellery Type</option>
+        <option>Ring</option>
+        <option>Necklace</option>
+        <option>Bracelet</option>
+        <option>Nose Ring</option>
+        <option>Payal</option>
+        <option>Earring</option>
+      </select>
+
+      <textarea name="Custom Design" placeholder="Describe your custom jewellery design..."></textarea>
+
+      <button type="submit">
+        ✨ Send Order Request ✨
+      </button>
+
+    </form>
+
+    <center>
+      <a href="indexcopy.html" class="back-btn">
+        ⬅ Go Back Home
+      </a>
+    </center>
+
+  </div>
+
+</body>
+
+</html>

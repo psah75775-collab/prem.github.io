@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+
+    <style>
+        body {
+            background: black;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: #111;
+            padding: 40px;
+            border-radius: 20px;
+            width: 350px;
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #c89b3c;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            background: #222;
+            color: white;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 30px;
+            background: #c89b3c;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: white;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            color: #c89b3c;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>🔐 Sign In</h1>
+
+        <<form onsubmit="showInfo(event)">
+
+            <input type="email" placeholder="Enter Email" required>
+
+            <input type="password" placeholder="Enter Password" required>
+
+            <button type="submit">
+                Login ✨
+            </button>
+
+            </form>
+
+            <!-- Owner Info Box -->
+
+            <div id="ownerInfo" style="
+display:none;
+margin-top:25px;
+background:#222;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(255,255,255,0.1);
+">
+
+                <h2 style="
+    color:#c89b3c;
+    margin-bottom:15px;
+    ">
+                    📞 Contact Details
+                </h2>
+
+                <p style="
+    font-size:18px;
+    margin-bottom:10px;
+    ">
+                    ✨ Number: 9339865100
+                </p>
+
+                <p style="
+    font-size:18px;
+    ">
+                    ✨ Email: a6761809@gmail.com
+                </p>
+
+            </div>
+
+            <a href="indexcopy.html" class="back">
+                ⬅ Back To Home
+            </a>
+
+    </div>
+
+</body>
+
+</html>

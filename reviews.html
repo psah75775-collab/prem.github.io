@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        .container {
+            background: black;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        body {
+            background: black;
+            color: white;
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-box {
+            background: #111;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .review-box {
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            background: #222;
+            color: white;
+            border: 1px solid #555;
+        }
+
+        h2,
+        h3 {
+            color: #c89b3c;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 12px 28px;
+            background: linear-gradient(45deg, #c89b3c, #f5d27a);
+            color: black;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+        }
+
+        .back-btn:hover {
+            background: white;
+            color: #111;
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="text-align:center; margin-top:25px;">
+        <a href="indexcopy.html" class="back-btn">
+            ⬅ Go Back To Home
+        </a>
+    </div>
+    <div class="container">
+
+        <!-- Review Form -->
+
+        <div class="contact-box">
+
+            <h2>🌟 Give Your Review</h2>
+
+            <input type="text" id="name" placeholder="Enter Your Name"
+                style="width:100%; padding:12px; margin-bottom:15px; border-radius:10px; border:1px solid #ccc;">
+
+            <!-- Star Rating -->
+
+            <div id="stars" style="font-size:35px; margin-bottom:15px; cursor:pointer;">
+                <span onclick="setRating(1)">☆</span>
+                <span onclick="setRating(2)">☆</span>
+                <span onclick="setRating(3)">☆</span>
+                <span onclick="setRating(4)">☆</span>
+                <span onclick="setRating(5)">☆</span>
+            </div>
+
+            <textarea id="comment" placeholder="Write your review..."
+                style="width:100%; height:120px; padding:12px; border-radius:10px; border:1px solid #ccc;"></textarea>
+
+            <br><br>
+
+            <button onclick="submitReview()" style="
+            background:#111;
+            color:white;
+            padding:12px 25px;
+            border:none;
+            border-radius:25px;
+            cursor:pointer;
+            font-size:16px;
+        ">
+                Submit Review ✨
+            </button>
+
+        </div>
+
+        <!-- Reviews Display -->
+
+        <div id="review-list"></div>
+
+        <!-- Contact Section -->
+
+        <div class="contact-box">
+
+            <div style="
+    margin-top:20px;
+    background:#222;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(255,255,255,0.1);
+">
+
+                <p style="
+        font-size:20px;
+        color:#c89b3c;
+        margin-bottom:8px;
+        font-weight:bold;
+    ">
+                    📞 Contact Number
+                </p>
+
+                <p style="
+        color:white;
+        font-size:18px;
+        letter-spacing:1px;
+    ">
+                    ✨ +91 98765 43210 ✨
+                </p>
+
+            </div>
+
+
+            <div style="
+    margin-top:20px;
+    background:#222;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(255,255,255,0.1);
+">
+
+                <p style="
+        font-size:20px;
+        color:#c89b3c;
+        margin-bottom:8px;
+        font-weight:bold;
+    ">
+                    📍 Address
+                </p>
+
+                <p style="
+        color:white;
+        font-size:18px;
+        letter-spacing:1px;
+    ">
+                    ✨ West Bengal, Hasimara, Gurudwar ✨
+                </p>
+
+            </div>
+
+            <div style="
+    margin-top:20px;
+    background:#222;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(255,255,255,0.1);
+">
+
+                <p style="
+        font-size:20px;
+        color:#c89b3c;
+        margin-bottom:8px;
+        font-weight:bold;
+    ">
+                    📧 Contact Email
+                </p>
+
+                <a href="mailto:a6761809@gmail.com" style="
+        color:white;
+        text-decoration:none;
+        font-size:18px;
+        letter-spacing:1px;
+    ">
+                    ✨ a6761809@gmail.com ✨
+                </a>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let rating = 0;
+
+        function setRating(value) {
+
+            rating = value;
+
+            let stars = document.querySelectorAll("#stars span");
+
+            stars.forEach((star, index) => {
+                if (index < value) {
+                    star.innerHTML = "⭐";
+                } else {
+                    star.innerHTML = "☆";
+                }
+            });
+        }
+
+        function submitReview() {
+
+            let name = document.getElementById("name").value;
+            let comment = document.getElementById("comment").value;
+
+            if (name === "" || comment === "" || rating === 0) {
+                alert("Please fill all details and select rating");
+                return;
+            }
+
+            let reviewBox = document.createElement("div");
+
+            reviewBox.classList.add("review-box");
+
+            reviewBox.innerHTML = `
+        <h3>${"⭐".repeat(rating)} ${name}</h3>
+        <p>${comment}</p>
+    `;
+
+            document.getElementById("review-list").prepend(reviewBox);
+
+            document.getElementById("name").value = "";
+            document.getElementById("comment").value = "";
+
+            rating = 0;
+
+            let stars = document.querySelectorAll("#stars span");
+
+            stars.forEach((star) => {
+                star.innerHTML = "☆";
+            });
+        }
+
+    </script>
+    </footer>
+    </div>
