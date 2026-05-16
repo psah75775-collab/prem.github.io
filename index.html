@@ -7,6 +7,100 @@
   <title>Luxury Jewellery Store</title>
 
   <style>
+    header {
+  background: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Top section */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Website title */
+header h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  flex: 1 1 100%;
+}
+
+/* Buttons */
+.signin-btn,
+.custom-btn {
+  background: #c89b3c;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.signin-btn:hover,
+.custom-btn:hover {
+  background: white;
+  color: #111;
+}
+
+/* Email section */
+.email-text {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.email-text a {
+  color: #c89b3c;
+  text-decoration: none;
+}
+
+/* Navigation */
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 18px;
+  display: inline-block;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+  }
+
+  .signin-btn,
+  .custom-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero {
+    font-size: 32px;
+    text-align: center;
+    padding: 20px;
+  }
+}
     * {
       margin: 0;
       padding: 0;
@@ -19,13 +113,7 @@
       color: white;
     }
 
-    header {
-      background: #111;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
+   
     header h1 {
       font-size: 40px;
       letter-spacing: 2px;
@@ -116,27 +204,11 @@
       font-size: 18px;
     }
 
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
+   
 
-    .custom-btn {
-      background: #c89b3c;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+    
 
-    .custom-btn:hover {
-      background: white;
-      color: #111;
-    }
+    
 
     header {
       background: #111;
@@ -146,9 +218,7 @@
       text-align: center;
     }
 
-    .top-bar {
-      display: block;
-    }
+   
 
     header h1 {
       font-size: 40px;
@@ -156,23 +226,7 @@
       margin-bottom: 10px;
     }
 
-    .custom-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #c89b3c;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .custom-btn:hover {
-      background: white;
-      color: #111;
-    }
+   
 
     footer {
       background: #111;
@@ -182,25 +236,7 @@
       margin-top: 50px;
     }
 
-    .signin-btn {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: #c89b3c;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
-    }
-
-    .signin-btn:hover {
-      background: white;
-      color: #111;
-      transform: scale(1.05);
-    }
+    
   </style>
 </head>
 
@@ -209,35 +245,34 @@
 
   <header>
 
+  <div class="top-bar">
     <a href="signin.html" class="signin-btn">
       🔐 Sign In
     </a>
-    <div class="top-bar">
 
-      <h1>Prem's Jewellery</h1>
+    <h1>Prem's Jewellery</h1>
 
-      <a href="custom.html" class="custom-btn">
-        Custom Made(Jewellery) - Click Here
-      </a>
+    <a href="custom.html" class="custom-btn">
+      Custom Made(Jewellery) - Click Here
+    </a>
+  </div>
 
-    </div>
+  <p class="email-text">
+    📧 Email ID:
+    <a href="mailto:a6761809@gmail.com">
+      a6761809@gmail.com
+    </a> ✨💌
+  </p>
 
-    <p style="position:absolute; top:75px; left:20px; font-size:16px;">
-      📧 Email ID:
-      <a href="mailto:a6761809@gmail.com" style="color:#c89b3c; text-decoration:none;">
-        a6761809@gmail.com
-      </a> ✨💌
-    </p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="about.html">About</a>
+  </nav>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="collections.html">Collections</a>
-      <a href="contact.html">Contact</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="about.html">About</a>
-    </nav>
-
-  </header>
+</header>
 
 
 
